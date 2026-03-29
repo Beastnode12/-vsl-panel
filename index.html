@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VSL PRIME ENGINE</title>
+
+<style>
+body {
+    margin:0;
+    background: linear-gradient(135deg,#000,#111);
+    color:white;
+    font-family: Arial;
+    text-align:center;
+}
+
+.container {
+    padding-top:40px;
+}
+
+.title {
+    font-size:28px;
+    color: gold;
+}
+
+.card {
+    background:#111;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.2);
+}
+
+.btn {
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background: gold;
+    color:black;
+    font-weight:bold;
+}
+
+.avatar {
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid gold;
+    margin:20px auto;
+}
+
+.loader {
+    color:gold;
+}
+
+.percent {
+    font-size:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">💎 VSL PRIME ENGINE</h1>
+
+<img src="https://i.imgur.com/6VBx3io.png" class="avatar">
+
+<h2 id="name">Welcome Back</h2>
+
+<p>Preparing your system...</p>
+
+<div class="percent" id="percent">0%</div>
+
+<div class="loader">Connecting Bots...</div>
+
+<div class="card">
+<h3>⚡ Quick Actions</h3>
+
+<button class="btn">Add Bots</button><br>
+<button class="btn">Manage Channels</button><br>
+<button class="btn">Broadcast</button>
+
+</div>
+
+</div>
+
+<script>
+
+let p = 0;
+
+let interval = setInterval(()=>{
+    p++;
+    document.getElementById("percent").innerText = p + "%";
+
+    if(p >= 100){
+        clearInterval(interval);
+        document.getElementById("name").innerText = "MIRAGE [ VERIFIED ]™";
+    }
+}, 25);
+
+</script>
+
+</body>
+</html>
